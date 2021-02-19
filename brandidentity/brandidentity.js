@@ -17,6 +17,7 @@ function setup() {
 
     c = createCanvas(852, 480);
     c.position((windowWidth-c.width)/2,(windowHeight-c.height)/2);
+    c.parent('canvasWrapper');
     pixelDensity(1);
     video = createCapture(VIDEO);
     video.size(width/vScale, height/vScale);
