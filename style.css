@@ -1,0 +1,51 @@
+@font-face { font-family: Menlo; src: url('Menlo.ttf');}
+
+html {
+    height: 100vh;
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    height: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    padding-left: 17%;
+    margin: 0 0 3px 0;
+    font-family: Menlo, Helvetica;
+    font-size: 20px;
+    text-shadow: 0px 0px 3.5px rgba(0, 0, 58, 0.712);
+}
+
+h1 a {
+    text-decoration: none;
+    color: black;
+}
+
+#link {
+    display:none;
+}
+
+#container {
+    margin-top: 18vh;
+}
+
+#box {
+    height: 360px;
+    width: 360px;
+    background: #000;
+    box-shadow: 0px 0px 3.5px 2px rgba(0, 0, 58, 0.445);
+}
+
+@media screen and (max-width:700px) {
+    #box {
+        height: 65vw;
+        width: 65vw;
+        background: #000;
+    }
+}
