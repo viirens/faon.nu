@@ -3,7 +3,7 @@
 function setup() {
    
     pixelDensity(1);
-    createCapture(VIDEO);
+    video = createCapture(VIDEO);
     video.size(320,240); 
   
  
