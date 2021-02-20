@@ -48,4 +48,9 @@ h1 a {
         width: 65vw;
         background: #000;
     }
+    
+      h1 {
+        font-size: 12px;
+    }
+}
 }
