@@ -23,7 +23,15 @@ function setup() {
     }).then((stream) => {
         video.srcObject = stream;
         video.onloadedmetadata = function() {
-            c = createCanvas(this.videoWidth, this.videoHeight);
+            if (windowWidth > this.videowidth) {
+                respwidth = this.videoWidth - (this.videoWidth -  windowWidth);
+                respheight = this.videoHeight - (this.videoWidth -  windowWidth);
+            }
+            else {
+                respwidth = this.videoWidth;
+                respheight = this.videoHeight;
+            }
+            c = createCanvas(respwidth, respheight);
             c.position((windowWidth-c.width)/2,(windowHeight-c.height)/2);
             c.parent('canvasWrapper');
         };
