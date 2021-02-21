@@ -23,7 +23,8 @@ function setup() {
     }).then((stream) => {
         video.srcObject = stream;
         video.onloadedmetadata = function() {
-            if (windowWidth < this.videowidth) {
+            console.log('vid width' + this.videoWidth);
+            if (windowWidth < this.videoWidth) {
                 respwidth = this.videoWidth - (this.videoWidth -  windowWidth);
                 respheight = this.videoHeight - (this.videoWidth -  windowWidth);
             }
