@@ -31,13 +31,14 @@ function setup() {
                 respwidth = this.videoWidth;
                 respheight = this.videoHeight;
             }
+            console.log(respwidth);
             c = createCanvas(respwidth, respheight);
             c.position((windowWidth-c.width)/2,(windowHeight-c.height)/2);
             c.parent('canvasWrapper');
         };
     })
 
-    
+    console.log('window width' + windowWidth);
 }
 
 function distance(r1,g1,b1,bright1,r2,g2,b2,bright2) {
