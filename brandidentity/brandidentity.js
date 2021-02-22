@@ -23,23 +23,14 @@ function setup() {
     }).then((stream) => {
         video.srcObject = stream;
         video.onloadedmetadata = function() {
-            console.log('vid width' + this.videoWidth);
-            if (windowWidth < this.videoWidth) {
-                respwidth = this.videoWidth - (this.videoWidth -  windowWidth);
-                respheight = this.videoHeight - (this.videoWidth -  windowWidth);
-            }
-            else {
-                respwidth = this.videoWidth;
-                respheight = this.videoHeight;
-            }
-            console.log(respwidth);
-            c = createCanvas(respwidth, respheight);
+            console.log(this.videoWidth, this.videoHeight);
+            c = createCanvas(this.videoWidth, this.videoHeight);
             c.position((windowWidth-c.width)/2,(windowHeight-c.height)/2);
             c.parent('canvasWrapper');
         };
     })
 
-    console.log('window width' + windowWidth);
+    
 }
 
 function distance(r1,g1,b1,bright1,r2,g2,b2,bright2) {
