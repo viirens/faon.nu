@@ -23,7 +23,16 @@ function setup() {
     }).then((stream) => {
         video.srcObject = stream;
         video.onloadedmetadata = function() {
-            console.log(this.videoWidth, this.videoHeight);
+             console.log('vid width' + this.videoWidth);
+            if (windowWidth < this.videoWidth) {
+                respwidth = windowWidth;
+                respheight = this.videoHeight - (this.videoWidth -  windowWidth);
+            }
+            else {
+                respwidth = this.videoWidth;
+                respheight = this.videoHeight;
+            }
+          
             c = createCanvas(this.videoWidth, this.videoHeight);
             c.position((windowWidth-c.width)/2,(windowHeight-c.height)/2);
             c.parent('canvasWrapper');
