@@ -33,7 +33,7 @@ function setup() {
                 respheight = this.videoHeight;
             }
           
-            c = createCanvas(this.videoWidth, this.videoHeight);
+            c = createCanvas(respwidth, respheight);
             c.position((windowWidth-c.width)/2,(windowHeight-c.height)/2);
             c.parent('canvasWrapper');
         };
