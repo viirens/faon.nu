@@ -32,7 +32,7 @@ function setup() {
                 respwidth = this.videoWidth;
                 respheight = this.videoHeight;
             }
-          
+            console.log(respwidth);
             c = createCanvas(respwidth, respheight);
             c.position((windowWidth-c.width)/2,(windowHeight-c.height)/2);
             c.parent('canvasWrapper');
