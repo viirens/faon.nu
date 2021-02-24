@@ -24,7 +24,7 @@ function setup() {
         video.onloadedmetadata = function() {
             var canvasDiv = document.getElementById('canvasWrapper');
             var width = canvasDiv.offsetWidth;
-           
+            console.log('vid height' + this.videoHeight);
             console.log('vid width' + this.videoWidth);
             if (windowWidth < this.videoWidth) {
                 respwidth = width;
@@ -53,7 +53,7 @@ function distance(r1,g1,b1,bright1,r2,g2,b2,bright2) {
 }
 
 function draw() {
-
+    console.log('canvwidth in draw' + width);
     x = width;
     y = height;
   
