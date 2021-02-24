@@ -1,10 +1,13 @@
 var video;
-var vScale = 16;
+var vScale = 9;
 var imgs = [];
 var place;
 var x;
 var y;
 var z = false;
+
+
+
 function setup() {
     imgs = [['imgs/1.jpg',255,255,255],['imgs/2.jpg',214,77,70],['imgs/16.jpg',253,235,112],
     ['imgs/18.jpg',253,253,81],['imgs/20.jpg',12,110,67],['imgs/25.jpg',251,13,27],
@@ -22,13 +25,11 @@ function setup() {
     }).then((stream) => {
         video.srcObject = stream;
         video.onloadedmetadata = function() {
-            var canvasDiv = document.getElementById('canvasWrapper');
-            var width = canvasDiv.offsetWidth;
-            console.log('vid height' + this.videoHeight);
+         
             console.log('vid width' + this.videoWidth);
             if (windowWidth < this.videoWidth) {
-                respwidth = width;
-                respheight = this.videoHeight - (this.videoWidth -  width);
+                respwidth = windowWidth;
+                respheight = this.videoHeight - (this.videoWidth -  windowWidth);
             }
             else {
                 respwidth = this.videoWidth;
@@ -44,6 +45,8 @@ function setup() {
     })
 
   console.log('window width' + windowWidth);
+
+  
     
 }
 
