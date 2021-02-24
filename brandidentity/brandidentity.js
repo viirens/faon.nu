@@ -1,5 +1,5 @@
 var video;
-var vScale = 9;
+var vScale = 10;
 var imgs = [];
 var place;
 var x;
