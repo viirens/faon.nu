@@ -68,9 +68,15 @@ function draw() {
         video.size(x/vScale,y/vScale);
         video.hide();
         z = true;
-        
-
     }
+    
+        // translate according to even or odd resolution
+      if (x % 2 == 0) {
+        tran = 2;
+      } else {
+        tran = 3;
+      }
+      translate(tran, tran);
     
     if (x > 100 && z == true) {
 
